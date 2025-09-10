@@ -1,3 +1,4 @@
+import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased`}>{children}</body>
+      <body className={`${font.className} antialiased`}>
+        <ResponsiveNav />
+        {children}
+      </body>
     </html>
   );
 }
